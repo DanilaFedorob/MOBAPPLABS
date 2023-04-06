@@ -16,12 +16,17 @@ export const WelcomeScreen = () => {
     const data = useQuery(GET_EVENT);
 
     console.log(data);
-    
-    return <View>
+    if(data.loading) {
+        return <View>
 
-        <Text> Welcome Screen </Text>
+        <Text> Ещё немного </Text>
 
           </View>
+    }
+    else {
+        return (data.data.event.description)
+    }
+   
     }
 
 

@@ -4,10 +4,19 @@ import { StyleSheet, Text, View } from 'react-native';
 import { ApolloDriver, ApolloProvider } from '@apollo/client';
 import { WelcomeScreen } from './screens/WelcomeScreen';
 import { apolloClient } from './services/AppoloClient/ApolloClient';
+import { SelectEventScreen } from './screens/SelectEventScreen/SelectEventScreen';
+import enUS from 'antd-mobile/es/locales/en-US';
+import { ConfigProvider } from 'antd-mobile';
 
 export default function App () {
   return (
-<ApolloProvider client = {apolloClient}> <WelcomeScreen/> </ApolloProvider> 
+<ApolloProvider client = {apolloClient}> 
+  <ConfigProvider locale={enUS}>
+    <View>
+     <SelectEventScreen/> 
+    </View>
+  </ConfigProvider>
+</ApolloProvider> 
   )
 }
 ///
