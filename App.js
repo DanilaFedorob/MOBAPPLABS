@@ -3,10 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 ///
 import { ApolloDriver, ApolloProvider } from '@apollo/client';
 import { WelcomeScreen } from './screens/WelcomeScreen';
-import { apolloClient } from './services/AppoloClient/ApolloClient';
+import { ConfigProvider } from 'antd-mobile';
 import { SelectEventScreen } from './screens/SelectEventScreen/SelectEventScreen';
 import enUS from 'antd-mobile/es/locales/en-US';
-import { ConfigProvider } from 'antd-mobile';
+import { apolloClient } from './services/AppoloClient/ApolloClient';
+
 
 export default function App () {
   return (
@@ -26,7 +27,7 @@ export default function App () {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
-    </View>
+    </View> 
   );
 }
 
